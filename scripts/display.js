@@ -41,8 +41,8 @@ function displayRows(){
         <tr id="${i}">
             <td>${pet.name}</td>
             <td>${pet.age}</td>
-            <td>${pet.gender}<td>
-            <td>${pet.breed}<td>
+            <td>${pet.gender}</td>
+            <td>${pet.breed}</td>
             <td>${pet.service}</td>
             <td>${pet.type}</td>
             <td><button class="btn btn-danger" onclick="deletePet(${i});">🚫</button></td>

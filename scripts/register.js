@@ -48,13 +48,13 @@ function register(){
     //display the array on the console
     if(isValid(newPet)){
         petSalon.pets.push(newPet);
-        displayNames();
-        displayCards();
-        //displayRows();
+        //displayNames();
+        //displayCards();
+        displayRows();
         clearForm();
         displayTotalAmountPets();
         displayServiceCount();
-        deletePet();
+        showNotification("something registered", "alert-success");
     }
 }
 
@@ -82,23 +82,23 @@ function deletePet(deleteIndex){
     petSalon.pets.splice(deleteIndex,1);
     document.getElementById(deleteIndex).remove();
     displayRows();
+    showNotification("something deleted", "alert-danger");
 }
 
 function init(){
 
     //hook
-
+    $("#closeNotification").click(hideNotification);
     //initial functions
     
-
     //creating a new pet
     let pet1 = new Pet("Corkey", 1.5, "Male","Doberman","Grooming");
     let pet2 = new Pet("Chicken Fried Rice", 3, "Female","Bobcat","Vaccine");
     let pet3 = new Pet("Blue", 1, "Male","Betta Fish","Hotel");
     petSalon.pets.push(pet1,pet2,pet3);
-    displayNames();
-    displayCards();
-    //displayRows();
+    //displayNames();
+    //displayCards();
+    displayRows();
     displayTotalAmountPets();
     displayServiceCount();
 
