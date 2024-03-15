@@ -80,6 +80,11 @@ a{
     border: 1px solid red;
 }
 
+.dark{
+    background-color: black;
+    color: white;
+}
+
 /*header*/
 .site-header{
     background-color: aquamarine;
@@ -108,6 +113,18 @@ nav a{
 /*more about us*/
 .more-about-us{
 
+}
+
+/*Footer*/
+.site-footer{
+    background-color: aquamarine;
+    padding: 15px;
+}
+
+.footer-btn{
+    background-color: black;
+    color: white;
+    border-radius: 10%;
 }
 
 /*Register page*/
@@ -169,11 +186,8 @@ nav a{
     background-color: lightgreen;
 }
 
-.dark{
-    background-color: black;
-    color: white;
-}
 
+/*Services and Notification*/
 li{
     cursor: pointer;
 }
@@ -210,3 +224,4 @@ li{
 .alert-success{
     background-color: green;
 }
+
