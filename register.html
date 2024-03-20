@@ -17,6 +17,8 @@
             <nav>
                 <a href="index.html">Home</a>
                 <a href="register.html">Register</a>
+                <a href="services.html">Services</a>
+                <p id="mode">Dark Mode</p>
             </nav>
         </div>
     </header>
@@ -64,20 +66,12 @@
                 </select>
             </div>
             <div class="input-control">
-                <label>Name on Card:</label>
-                <input type="text" id="cardName">
-
-                <label>Card Number:</label>
-                <input type="text" id="cardNumber">
-
-                <label>Exp Month:</label>
-                <input type="text" id="expMonth">
-
-                <label>Exp Year:</label>
-                <input type="text" id="expYear">
-
-                <label>CVV:</label>
-                <input type="text" id="cvv">
+                <label>Payment Method:</label>
+                <section id="methodType">
+                    <option value="Debit">Debit</option>
+                    <option value="Credit">Credit</option>
+                    <option value="Cash">Cash</option>
+                </section>
             </div>
             <div class="btn-container">
                 <button class="btn" onclick="register();">Register</button>
@@ -118,6 +112,25 @@
             </tbody>
         </table>
     </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div>
+                <p class="main-text"></p>
+                <p class="secondary-text">Contact Us</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis vero est perferendis reiciendis nobis, nam, odio ut, tempore dicta corporis dolorum saepe dignissimos mollitia tempora?</p>
+
+                <p>jesse@thepetspa.com</p>
+            </div>
+
+            <div>.
+                <label>Join Our Mailing List</label>
+                <input type="text">
+                <button class="footer-btn">Register</button>
+            </div>
+        </div>
+    </footer>
+
     <script src="./plugins/jquery3.7.1.js"></script>
     <script src="./scripts/display.js"></script>
     <script src="./scripts/register.js"></script>

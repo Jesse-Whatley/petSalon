@@ -116,6 +116,12 @@ nav a{
 }
 
 /*Footer*/
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+-
 .site-footer{
     background-color: aquamarine;
     padding: 15px;
