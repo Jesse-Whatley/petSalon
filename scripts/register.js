@@ -21,13 +21,14 @@ function displayPetCount(){
 }
 
 //creating the constructor
-function Pet(name, age, gender, breed, service, type){
+function Pet(name, age, gender, breed, service, type, price){
     this.name = name;
     this.age = age;
     this.gender = gender;
     this.breed = breed;
     this.service = service;
     this.type = type;
+    this.price = price
 }
 
 function calculateAverage() {
@@ -40,7 +41,7 @@ function calculateAverage() {
 
 function register(){
     //get the values from the HTML
-    console.log(inputName.value,inputAge.value,inputGender.value,inputBreed.value,inputService.value,inputType.value);
+    console.log(inputName.value,inputAge.value,inputGender.value,inputBreed.value,inputService.value,inputType.value, getServicePrice(inputService.value));
     //create the object using the constructor
     let newPet = new Pet(inputName.value,inputAge.value,inputGender.value,inputBreed.value,inputService.value,inputType.value);
     //push the object to the array'
@@ -85,6 +86,31 @@ function deletePet(deleteIndex){
     showNotification("something deleted", "alert-danger");
 }
 
+function getServices(){
+    // read the local storage
+    let serviceList = readItems();// this function is under LS
+    for(let i=0; i<serviceList.length; i++){
+        //travel the array/list of services
+        let service = serviceList[i];
+        $("#txtService").append(`<option value= "${service.title}">${service.title}</option>`);
+    }
+    // create the <option></option> element
+    // insert it on the HTML
+}
+
+function getServicePrice(serviceName) {
+    let serviceList = readItems();
+    let price = 0;
+    for(let i=0; i<serviceList.length; i++){
+        //travel the array/list of services
+        let service = serviceList[i];
+        if(service.title === serviceName){
+            price = service.price;
+        }
+    }
+    return Number(price);
+}
+
 function init(){
 
     //hook
@@ -101,6 +127,8 @@ function init(){
     displayRows();
     displayTotalAmountPets();
     displayServiceCount();
+    getServices();
+    getServicePrice();
 
     //load the input
     inputName = document.getElementById("txtName");

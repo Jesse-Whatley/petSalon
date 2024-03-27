@@ -26,6 +26,7 @@ function displayCards(){
             <p>${pet.breed}</p>
             <p>${pet.service}</p>
             <p>${pet.type}</p>
+            <p>${pet.price}</p>
             </div>
             `;
     }
